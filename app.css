@@ -76,22 +76,27 @@ h2 {
 }
 
 main {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    height: 75vh;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 50% auto;
 }
 
-#main-container {
-    width: 50%
-}
-
-.main-section, aside {
+section, article, aside {
     border: solid 1px black;
     margin: 5px;
     padding: 15px;
 }
 
+#contact {
+    grid-row-start: 2;
+}
+
 aside {
-    width: 30%;
+    margin: 5px;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 
 #article-container {
@@ -100,4 +105,8 @@ aside {
 
 footer {
     text-align: center;
+}
+
+#copyright {
+    padding: 10px;
 }
